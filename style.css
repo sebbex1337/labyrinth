@@ -1,0 +1,51 @@
+:root {
+  --row-num: 4;
+  --col-num: 4;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(var(--col-num), 50px);
+  grid-template-rows: repeat(var(--row-num), 50px);
+}
+
+.cell {
+  box-sizing: border-box;
+  border: 1px dashed black;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wall.north {
+  border-top: 2px solid gray;
+}
+
+.wall.south {
+  border-bottom: 2px solid gray;
+}
+
+.wall.east {
+  border-right: 2px solid gray;
+}
+
+.wall.west {
+  border-left: 2px solid gray;
+}
+
+.visited {
+  background-color: lightblue;
+}
+
+.dead-end {
+  background-color: lightskyblue;
+}
+
+.start {
+  background-color: lightgreen;
+}
+
+.goal {
+  background-color: lightcoral;
+}
